@@ -51,19 +51,41 @@ def parse_args():
     log.debug('args=%r', args)
     return args
 
+def RepresentsInt(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+def do_query(query):
+    if RepresentsInt(query):
+        query = int(query)
+        wf.add_item(
+            'Open TargetProcess #{}'.format(query),
+            arg=wf.settings['instance_url'] + '/entity/' + str(query),
+            valid=True
+        )
+    else:
+        wf.add_item(
+            'Search TargetProcess for \'{}\''.format(query),
+            arg=wf.settings['instance_url'] + '/RestUI/Board.aspx#searchPopup=query/' + query,
+            valid=True
+        )
+
+    wf.send_feedback()
+    return 0
+
+
 def main(wf):
     """Run workflow script."""
     args=parse_args()
 
+    show_update()
+
     # First, check for a query to keep that quick.
     if args.query:
-        wf.add_item(
-            'Open TargetProcess #{}'.format(args.query),
-            arg=wf.settings['instance_url'] + '/entity/' + args.query,
-            valid=True
-        )
-        wf.send_feedback()
-        return 0
+        return do_query(args.query)
 
     if args.settings:
         return do_settings()

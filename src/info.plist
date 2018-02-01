@@ -159,7 +159,8 @@
 	<key>readme</key>
 	<string>## Setup and Usage
 * Run `tpsettings` and configure your instance URL in the editor, save, and go!
-* Run `tp &lt;id #&gt;` to navigate to a ticket, eg: `tp 1123`</string>
+* Run `tp &lt;id #&gt;` to navigate to a ticket, eg: `tp 1123`
+* Run `tp &lt;search string&gt;` to navigate to a search</string>
 	<key>uidata</key>
 	<dict>
 		<key>401F9FDA-28A7-4EE0-8EAD-CCC538DD803B</key>
@@ -192,7 +193,7 @@
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.2.0</string>
 	<key>webaddress</key>
 	<string>https://lukewaite.ca</string>
 </dict>

@@ -7,6 +7,7 @@ Quickly navigate to Target Process tickets in [Alfred 3][alfred].
 ## Setup and Usage
 * Run `tpsettings` and configure your instance URL in the editor, save, and go!
 * Run `tp <id #>` to navigate to a ticket, eg: `tp 1123`
+* Run `tp <search string>` to navigate to a search
 
 ## TODOs
 * Initial release.
