@@ -55,25 +55,20 @@ def main(wf):
     """Run workflow script."""
     args=parse_args()
 
-    if args.settings:
-        return do_settings()
-
-    if not args.query:
-        show_update()
+    # First, check for a query to keep that quick.
+    if args.query:
         wf.add_item(
-            'Jump to Target Process Issue',
-            u'eg. tp 1123'
+            'Open TargetProcess #{}'.format(args.query),
+            arg=wf.settings['instance_url'] + '/entity/' + args.query,
+            valid=True
         )
         wf.send_feedback()
         return 0
 
-    wf.add_item(
-        'Open TargetProcess #{}'.format(args.query),
-        arg=wf.settings['instance_url'] + '/entity/' + args.query,
-        valid=True
-    )
-    wf.send_feedback()
-    return 0
+    if args.settings:
+        return do_settings()
+
+    raise ValueError('unknown action')
 
 
 if __name__ == '__main__':

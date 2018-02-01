@@ -55,7 +55,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
@@ -63,9 +63,9 @@
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
