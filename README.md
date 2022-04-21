@@ -6,7 +6,8 @@ Quickly navigate to Target Process tickets in [Alfred 3][alfred].
 
 ## Setup and Usage
 * Open Alfred and click the `[x]` icon in the top right of the workflow
-* Set your TP URL as a workflow environment variable
+* Set your TP Slug as a workflow environment variable
+  * eg, `https://mycompany.tpondemand.com` becomes `mycompany`
 * Run `tp <id #>` to navigate to a ticket, eg: `tp 1123`
 
 ## TODOs

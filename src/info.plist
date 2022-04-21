@@ -61,7 +61,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>{var:TP_URL}/{query}</string>
+				<string>https://{var:TP_URL}.tpondemand.com/entity/{query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -76,7 +76,8 @@
 	<key>readme</key>
 	<string>## Setup and Usage
 * Open Alfred and click the `[x]` icon in the top right of the workflow
-* Set your TP URL as a workflow environment variable
+* Set your TP Slug as a workflow environment variable
+  * eg, `https://mycompany.tpondemand.com` becomes `mycompany`
 * Run `tp &lt;id #&gt;` to navigate to a ticket, eg: `tp 1123`</string>
 	<key>uidata</key>
 	<dict>
@@ -98,7 +99,7 @@
 	<key>variables</key>
 	<dict>
 		<key>TP_URL</key>
-		<string></string>
+		<string>intouchinsight</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
